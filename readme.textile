@@ -88,7 +88,9 @@ You can change it to not use the pencil icon (for example) by defining the custo
 
 <pre language='javascript'>
 var myCustomTemplates = {
-  html : function(locale) {
+  html : function(context) {
+    var locale = context.locale;
+    var options = context.options;
     return "<li>" +
            "<div class='btn-group'>" +
            "<a class='btn' data-wysihtml5-action='change_view' title='" + locale.html.edit + "'>HTML</a>" +
